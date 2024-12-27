@@ -15,7 +15,7 @@ title:
             </div>
         </div>
         <div class="hero-image">
-            <img src="/assets/images/hero-image.jpg" alt="Mangoo Hero Image" width="300" height="300">
+            <img src="assets/images/hero-image.jpg" alt="Mangoo Hero Image" width="300" height="300">
         </div>
     </div>
 </section>
@@ -24,12 +24,12 @@ title:
 <section class="products-section" id="products">
     <div class="product-grid">
         <div class="product-card">
-            <img src="/assets/images/product1.jpg" alt="Mango Natural" width="900" height="900">
+            <img src="assets/images/product1.jpg" alt="Mango Natural" width="900" height="900">
             <h2>Mango Natural Deshidratado</h2>
             <p>Disfruta de la dulzura natural del mango en cada mordida. Sin azúcares añadidos ni conservadores, es el snack perfecto para cuidar tu salud mientras disfrutas del auténtico sabor de la fruta.</p>
         </div>
         <div class="product-card">
-            <img src="/assets/images/product2.jpg" alt="Mango Enchilado" width="900" height="900">
+            <img src="assets/images/product2.jpg" alt="Mango Enchilado" width="900" height="900">
             <h2>Mango Enchilado Deshidratado</h2>
             <p>Una combinación única de chiles, limón y condimentos que eleva el mango deshidratado a otro nivel. Perfecto para los amantes de lo dulce y picosito.</p>
         </div>

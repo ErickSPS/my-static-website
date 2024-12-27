@@ -21,7 +21,7 @@ title: Mangoo
 description: Los mejores snacks saludables en México.
 
 # URL Options
-baseurl: "my-static-website" # Leave blank unless hosting under a subpath
+baseurl: "" # Leave blank unless hosting under a subpath
 url: "" # Update with your final domain
 
 # Repo
