@@ -1,0 +1,36 @@
+<footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="current-year"></span> <span id="localized-text"></span></p>
+      <ul>
+        <li><a href="#legal">Aviso Legal</a></li>
+        <li><a href="#disclaimers">Políticas</a></li>
+      </ul>
+    </div>
+    <script src="https://unpkg.com/i18next@21.6.14/dist/umd/i18next.min.js"></script>
+    <script>
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+
+      i18next.init({
+        lng: 'es', // set the language
+        resources: {
+          es: {
+            translation: {
+              "footerText": "Mangoo. Todos los derechos reservados."
+            }
+          },
+          en: {
+            translation: {
+              "footerText": "Mangoo. All rights reserved."
+            }
+          }
+        }
+      }, function(err, t) {
+        if (err) {
+          console.error('Error initializing i18next:', err);
+        } else {
+          document.getElementById('localized-text').textContent = i18next.t('footerText');
+        }
+      });
+    </script>
+  </footer>
+  

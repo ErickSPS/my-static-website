@@ -1,0 +1,11 @@
+title: Mangoo
+description: Los mejores snacks saludables en México.
+baseurl: "" # Leave blank unless hosting under a subpath
+url: "http://127.0.0.1:4000" # Update with your final domain
+theme: jekyll-theme-cayman
+plugins:
+  - jekyll-feed
+  - jekyll-remote-theme
+  - jekyll-sitemap
+markdown: kramdown
+encoding: utf-8
