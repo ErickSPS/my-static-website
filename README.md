@@ -1,6 +1,6 @@
 # Mangoo Snack Website
 
-Welcome to the repository for **Mangoo**, the static website prototype for my healthy snack business. This website is designed to showcase our products and communicate our brand identity.
+Welcome to the repository for **Mangoo**, the static website prototype for our healthy snack business. This website is designed to showcase our products and communicate our brand identity.
 
 ## Purpose
 The current purpose of this repository is to test and experiment with creating a static website for our business. This includes:
