@@ -1,7 +1,13 @@
+--- 
+---
+
+@import "{{ site.theme }}";
+
+
 /* Estilos generales */
 :root {
     --gradient-direction: 135deg;
-    --primary-color: #157878;
+    --primary-color: #177a7a;
 }
 body {
     font-family: 'Roboto', sans-serif;
@@ -18,7 +24,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: linear-gradient(var(--gradient-direction), #94B9FF, #CDFFD8);
+    background: linear-gradient(var(--gradient-direction), #df190b, #CDFFD8);
     color: var(--primary-color);
 }
 .hero-section {
@@ -35,6 +41,9 @@ header {
     width: 100%;
     height: auto;
     border-radius: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .cta-buttons {
@@ -52,37 +61,19 @@ header {
     border-radius: 5px;
     background-color: var(--primary-color);
     color: #ffffff;
-}
-
-.cta-primary {
+    border: 2px solid transparent;
     transition: border 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
-.cta-primary:hover {
-    border: 2px solid #157878;
-    background-color: transparent;
-}
-
-.cta-secondary {
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
+.cta-primary:hover,
 .cta-secondary:hover {
-    background-color: var(--primary-color);
-    color: #ffffff;
-}
-
-.cta-secondary:active {
-    background-color: #f9f9f9;
-    text-align: center;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background-color: #0c4444;
 }
 
 .product-grid {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 15px;
 }
 
 .product-card {
@@ -90,7 +81,7 @@ header {
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 20px;
-    max-width: 90%;
+    max-width: 100%;
     text-align: center;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
@@ -144,4 +135,79 @@ footer a {
 
 .hero-text {
     padding: 0 10px;
+}
+.hero-text h1 {
+    line-height: 1.2;
+}
+
+
+/*
+    RPECK 27/12/2024 - Page Header
+*/
+.page-header {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/*
+    RPECK 27/12/2024 - Main content styling
+*/
+.main-content > section ~ section {
+    margin-top: 25px;
+}
+
+/*
+    RPECK 27/12/2024 - Navigation Links
+*/
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 10px;
+}
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.95em;
+}
+.nav-links a:hover,
+.nav-links a:focus, 
+.nav-links a:active {
+    text-decoration: underline;
+}
+
+/*
+    RPECK 27/12/2024 - Hero Container
+*/
+.hero-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/*
+    RPECK 27/12/2024 - Header Logo Area
+*/
+.header-logo {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    align-items: center;
+    column-gap: 15px;
+}
+.header-logo .title-area {
+    text-align: left;
+}
+.header-logo .project-tagline {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.header-logo img {
+    display: block;
+}
+.header-logo h1 {
+    line-height: 1;
 }

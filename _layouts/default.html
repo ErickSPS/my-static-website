@@ -1,16 +1,61 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
-</head>
-<body>
-    {% include header.html %}
-    <main>
-        {{ content }}
+
+    {% seo %}
+    <link rel="preconnect" href="//fonts.gstatic.com">
+    <link rel="preload" href="//fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    {% include head-custom.html %}
+
+  </head>
+  <body>
+
+    <header class="page-header" role="banner">
+
+        <div class="header-logo">
+
+            <a href="/"><img src="{{ 'assets/images/logo.png' | relative_url }}" width="150" /></a>
+
+            <div class="title-area">
+                <h1 class="project-name">{{ site.title | default: site.title | default: site.github.repository_name }}</h1>
+                <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
+            </div>
+
+        </div>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#products">Productos</a></li>
+                <li><a href="#about">Nosotros</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      {{ content }}
+
+        <footer class="site-footer">
+            <section id="legal">
+                <h3>Aviso Legal</h3>
+                <p>Los productos ofrecidos por Mangoo están elaborados con ingredientes de la más alta calidad.</p>
+            </section>
+
+            <p>&copy; <span id="year"></span> Mangoo. Todos los derechos reservados.</p>
+            <p>
+                <a href="#legal">Aviso Legal</a> |
+                <a href="#contact">Contáctanos</a>
+            </p>
+        </footer>
+
     </main>
-    {% include footer.html %}
-</body>
+
+  </body>
 </html>
