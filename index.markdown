@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 
+title: Welcome!
 ---
 
 <!-- Hero Section -->
@@ -83,7 +83,9 @@ title:
         Ref: https://jekyllrb.com/docs/collections/
     {% endcomment %}
     <div class="product-grid">
-        {% for product in site.products %}
+        {% assign products = site.products | sort: order | reverse %}
+
+        {% for product in products %}
             <div class="product-card">
                 <img src="assets/images/{{ product.image }}" alt="{{ product.name }}" width="900" height="900">
                 <h2>{{ product.name }} Deshidratado</h2>
