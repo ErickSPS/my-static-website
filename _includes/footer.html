@@ -1,36 +1,37 @@
-<footer class="site-footer">
-    <div class="container">
-      <p>&copy; <span id="current-year"></span> <span id="localized-text"></span></p>
-      <ul>
-        <li><a href="#legal">Aviso Legal</a></li>
-        <li><a href="#disclaimers">Políticas</a></li>
-      </ul>
+<footer class="footer-container">
+    <div class="footer-wrapper">
+        <div class="footer-content">
+            <!-- Logo -->
+            <img src="assets/images/logo.png" class="brand-logo" alt="Mangoo Logo" />
+            
+            <!-- Navigation -->
+            <nav class="navigation" role="navigation" aria-label="Footer Navigation">
+                <a href="#" class="nav-item">Inicio</a>
+                <a href="#about" class="nav-item">Nosotros</a>
+                <a href="#products" class="nav-item">Productos</a>
+                <a href="#contact" class="nav-item">Contacto</a>
+            </nav>
+            
+            <!-- Social Links -->
+            <div class="social-links">
+                <a href="#" aria-label="Visita nuestra página de Instagram">
+                    <img src="assets/images/instagram-icon.png" class="social-icon" alt="Instagram" />
+                </a>
+                <a href="#" aria-label="Visita nuestra página de Facebook">
+                    <img src="assets/images/facebook-icon.png" class="social-icon" alt="Facebook" />
+                </a>
+            </div>
+        </div>
+        
+        <div class="footer-divider"></div>
+        
+        <div class="copyright-text">
+            Copyright © <span id="current-year"></span> Mangoo | Todos los derechos reservados
+        </div>
     </div>
-    <script src="https://unpkg.com/i18next@21.6.14/dist/umd/i18next.min.js"></script>
-    <script>
-      document.getElementById('current-year').textContent = new Date().getFullYear();
+</footer>
 
-      i18next.init({
-        lng: 'es', // set the language
-        resources: {
-          es: {
-            translation: {
-              "footerText": "Mangoo. Todos los derechos reservados."
-            }
-          },
-          en: {
-            translation: {
-              "footerText": "Mangoo. All rights reserved."
-            }
-          }
-        }
-      }, function(err, t) {
-        if (err) {
-          console.error('Error initializing i18next:', err);
-        } else {
-          document.getElementById('localized-text').textContent = i18next.t('footerText');
-        }
-      });
-    </script>
-  </footer>
+<script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
   
