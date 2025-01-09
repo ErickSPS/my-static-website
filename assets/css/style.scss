@@ -44,6 +44,15 @@ section > div {
     margin-right: auto;
 }
 
+section ~ section {
+    padding-top: 80px;
+}
+
+/* Main Content */
+.main-content {
+    max-width: unset;
+}
+
 /* Header */
 header {
     display: flex;
@@ -107,6 +116,169 @@ header {
 
 }
 
+/* Products Section */
+.products-section {
+
+    // Main container
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 10px;
+
+        .product-card {
+            color: #606c71;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+    }
+}
+
+/* About Section */
+.story-section {
+    padding: 0;
+    background: none;
+
+    // Text
+    .story-text {
+        max-width: 800px;
+        margin-bottom: 80px;
+    }
+
+    // Title
+    .story-title {
+        font-size: 2.5em;
+        margin-bottom: 30px;
+        color: var(--primary-color);
+        font-weight: bold;
+    }
+    
+    // Description
+    .story-description {
+        font-size: 1.2em;
+        line-height: 1.2;
+        margin-bottom: 20px;
+        color: var(--primary-color);
+    }
+    
+}
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+
+    // Service Cards
+    .service-card {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 30px;
+        border-radius: 15px;
+        transition: transform 0.3s ease;
+        text-align: center;
+
+        // Hover
+        &:hover {
+            transform: translateY(-10px);
+        }
+
+        // Icon
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            display: block;
+        }
+
+        // Title 
+        .service-title {
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            font-weight: bold;
+            text-align: center;
+        }
+
+        // Description
+        .service-description {
+            font-size: 1.1em;
+            line-height: 1.5;
+            color: var(--primary-color);
+            text-align: center;
+        }
+
+    }
+
+}
+
 /* Footer */
+footer {
+    text-align: center;
+    color: #ffffff;
+    font-size: 0.9rem;
 
+    // Link
+    a {
+        color: var(--primary-color);
+        text-decoration: none;
+        font-weight: bold;
+    }
 
+    // Container 
+    .footer-content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 0 40px !important;
+
+        // Mango Logo
+        .brand-logo {
+            max-width: 150px;
+        }
+
+        // Links
+        a {
+            color: white;
+        }
+
+    }
+
+    // Social Icons
+    .social-links {
+        padding: 20px 0;
+        img {
+            max-width: 30px;
+        }
+        a {
+            &:hover,
+            &:active {
+                text-decoration: none;
+            }
+        }
+    }
+
+    // Copyright Text
+    .copyright-text {
+        background-color: black;
+        padding: 10px 0;
+    }
+
+}

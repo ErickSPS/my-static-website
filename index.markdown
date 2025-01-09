@@ -74,8 +74,8 @@ title: Welcome!
 </section>
 
 <!-- Products Section -->
-<section class="products-section">
-    <h2 class="products-title">Nuestros Productos</h2>
+<section class="products-section" id="products">
+    <h2 class="products-title" align="center">Nuestros Productos</h2>
 
     {% comment %}
         RPECK 09/01/2025 - Added loop to provide the means to manage products from the ./_products folder
