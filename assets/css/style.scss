@@ -150,6 +150,78 @@ header {
     }
 }
 
+/* Hero Section */
+.hero-section {
+    display: flex;
+    background: none;
+    color: var(--primary-color);
+    flex-wrap: wrap;
+    padding: 100px 0;
+    gap: 60px;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    // Content
+    .hero-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 200px;
+    }
+
+    // Image Container
+    .hero-image {
+        flex: 1;
+        min-width: 400px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+    
+        // Image
+        img {
+            max-width: 600px;
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            display: block;
+            margin: 0;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+    }
+
+    // CTA Buttons
+    .cta-buttons {
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+
+        .cta-primary,
+        .cta-secondary {
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            padding: 15px 30px;
+            border-radius: 5px;
+            background-color: var(--primary-color);
+            color: #ffffff;
+            border: 2px solid transparent;
+            transition: border 0.3s ease-in-out, background-color 0.3s ease-in-out;
+        
+            &:hover,
+            &:hover {
+                background-color: #0c4444;
+            }
+        }   
+
+    }
+
+}
+
+
+
 /* About Section */
 .story-section {
     padding: 0;
