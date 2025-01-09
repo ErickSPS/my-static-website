@@ -17,8 +17,8 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: ""
-description: ""
+title: "Mangoo"
+description: "Fresh and Healthy Mangos for Everybody!"
 
 # URL Options
 baseurl: "" # Leave blank unless hosting under a subpath
@@ -26,6 +26,15 @@ url: "" # Update with your final domain
 
 # Repo
 repository: ErickSPS/my-static-website
+
+## RPECK 09/01/2025 - Collections
+## Used to output various groups of data objects
+collections: 
+  - products
+
+## RPECK 09/01/2025 - Stripe Details
+stripe: 
+  publishable_key: pk_test_67kzaipYLaDOd1vueE00Q4ai
 
 # Build settings
 remote_theme: pages-themes/cayman@v0.2.0

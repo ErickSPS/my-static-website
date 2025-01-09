@@ -76,26 +76,30 @@ title:
 <!-- Products Section -->
 <section class="products-section">
     <h2 class="products-title">Nuestros Productos</h2>
-    <div class="product-grid">
-        <div class="product-card">
-            <img src="assets/images/product1.jpg" alt="Mango Natural" width="900" height="900">
-            <h2>Mango Natural Deshidratado</h2>
-            <p>Disfruta de la dulzura natural del mango en cada mordida. Sin azúcares añadidos ni conservadores, es el snack perfecto para cuidar tu salud mientras disfrutas del auténtico sabor de la fruta.</p>
-        </div>
-        <div class="product-card">
-            <img src="assets/images/product2.jpg" alt="Mango Enchilado" width="900" height="900">
-            <h2>Mango Enchilado Deshidratado</h2>
-            <p>Una combinación única de chiles, limón y condimentos que eleva el mango deshidratado a otro nivel. Perfecto para los amantes de lo dulce y picosito.</p>
-        </div>
-    </div>
-</section>
 
-<!-- Payment Section -->
-<section class="payment-section">
-    <div class="payment-content">
-        <h2 class="section-title">Realizar Pago</h2>
-        {% include payment-form.html %}
+    {% comment %}
+        RPECK 09/01/2025 - Added loop to provide the means to manage products from the ./_products folder
+        --
+        Ref: https://jekyllrb.com/docs/collections/
+    {% endcomment %}
+    <div class="product-grid">
+        {% for product in site.products %}
+            <div class="product-card">
+                <img src="assets/images/{{ product.image }}" alt="{{ product.name }}" width="900" height="900">
+                <h2>{{ product.name }} Deshidratado</h2>
+                <p>{{ product }}</p>
+
+                <p>
+                    <stripe-buy-button
+                        buy-button-id="{{ product.button_id }}"
+                        publishable-key="{{ site.stripe.publishable_key }}"
+                    >
+                    </stripe-buy-button>
+                </p>
+            </div>
+        {% endfor %}
     </div>
+
 </section>
 
 <!-- Contact Section -->
