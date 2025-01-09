@@ -87,7 +87,6 @@ title: Welcome!
 
         {% for product in products %}
             <div class="product-card">
-                <img src="assets/images/{{ product.image }}" alt="{{ product.name }}" width="900" height="900">
                 <h2>{{ product.name }} Deshidratado</h2>
                 <p>{{ product }}</p>
 
