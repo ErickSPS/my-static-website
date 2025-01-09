@@ -16,7 +16,7 @@ body {
     top: 0;
     z-index: 1000;
     background: linear-gradient(var(--gradient-direction), var(--gradient-start), var(--gradient-end));
-    color: var(--primary-color)
+    color: var(--primary-color);
 }
 header {
     display: flex;
@@ -822,7 +822,7 @@ footer a {
 }
 
 .stripe-button:hover {
-    background: darken(var(--primary-color), 10%);
+    background: darken(blue, 10%);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
