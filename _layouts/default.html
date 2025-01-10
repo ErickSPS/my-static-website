@@ -5,12 +5,12 @@
 
     {% seo %}
     <link rel="preconnect" href="//fonts.gstatic.com">
-    <link rel="preload" href="//fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
-
+    
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" >
     {% include head-custom.html %}
 
   </head>
@@ -21,13 +21,6 @@
         <div class="header-logo">
 
             <a href="/"><img src="assets/images/logo.png" width="150" /></a>
-
-            {% comment %}
-            <div class="title-area">
-                <h1 class="project-name">{{ site.title | default: site.title | default: site.github.repository_name }}</h1>
-                <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
-            </div>
-            {% endcomment %}
 
         </div>
 
@@ -43,33 +36,7 @@
 
     <main id="content" class="main-content" role="main">
       {{ content }}
-
-        {% comment %}
-        <footer class="site-footer">
-            <section id="legal">
-                <h3>Aviso Legal</h3>
-                <p>Los productos ofrecidos por Mangoo están elaborados con ingredientes de la más alta calidad.</p>
-            </section>
-
-            <p>&copy; <span id="year"></span> Mangoo. Todos los derechos reservados.</p>
-            <p>
-                <a href="#legal">Aviso Legal</a> |
-                <a href="#contact">Contáctanos</a>
-            </p>
-        </footer>
-        {% endcomment %}
-
     </main>
-
-    <div class="background-decorations">
-        <!-- Top left area -->
-        <img src="{{ site.baseurl }}/assets/images/Mango Icons/9.png" alt="" class="bg-icon bg-icon-1">
-        <img src="{{ site.baseurl }}/assets/images/Mango Icons/10.png" alt="" class="bg-icon bg-icon-2">
-        
-        <!-- Bottom right area -->
-        <img src="{{ site.baseurl }}/assets/images/Mango Icons/9.png" alt="" class="bg-icon bg-icon-3">
-        <img src="{{ site.baseurl }}/assets/images/Mango Icons/10.png" alt="" class="bg-icon bg-icon-4">
-    </div>
 
     {% include footer.html %}
 
